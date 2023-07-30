@@ -4,7 +4,7 @@ class SingletonMeta(type):
     def __new__(cls, name, bases, dct):
         return super().__new__(cls, name, bases, dct)
 
-    def __call__(cls):
+    def __call__(cls, *args, **kwargs):
         if cls.__instance is None:
             print(f'Instance created: {id(cls.__instance)}')
             cls.__instance = cls
