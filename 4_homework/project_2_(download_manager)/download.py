@@ -82,7 +82,7 @@ class ThreadingDownloader(Download):
         thread = threading.Thread(target=self.save_file, args=(downloaded_file,))
         print(f'Download started {self.url} with {thread.getName}')
         thread.start()
-        # thread.join()
+        thread.join()
         self.download_complete()
 
 
