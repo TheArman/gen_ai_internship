@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+</head>
+<body>
+    <h1>User Authentication</h1>
+
+    <h2>Registration</h2>
+    <form method="POST" action="/register">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Register">
+    </form>
+
+    <h2>Login</h2>
+    <form method="POST" action="/login">
+        <label for="login-email">Email:</label>
+        <input type="text" id="login-email" name="email" required><br>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <h2>Logout</h2>
+    <form method="POST" action="/logout">
+        <label for="logout-email">Email:</label>
+        <input type="text" id="logout-email" name="email" required><br>
+        <input type="submit" value="Logout">
+    </form>
+
+    <h2>Password Reset Request</h2>
+    <form method="POST" action="/password-reset-request">
+        <label for="reset-email">Email:</label>
+        <input type="text" id="reset-email" name="email" required><br>
+        <input type="submit" value="Request Password Reset">
+    </form>
+
+    <h2>Password Reset</h2>
+    <form method="POST" action="/password-reset">
+        <label for="reset-email">Email:</label>
+        <input type="text" id="reset-email" name="email" required><br>
+        <label for="reset-token">Token:</label>
+        <input type="text" id="reset-token" name="token" required><br>
+        <label for="new-password">New Password:</label>
+        <input type="password" id="new-password" name="new_password" required><br>
+        <input type="submit" value="Reset Password">
+    </form>
+    <br>
+
+    <h2 style="color:tomato"> RESULT:
+        {% if message %}
+        <a style="color:black">{{ message }}</a>
+        {% endif %}
+    </h2>
+
+</body>
+</html>
