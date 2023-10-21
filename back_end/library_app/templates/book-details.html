@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+</head>
+<body>
+    <h1>Book Details</h1>
+    <p><strong>Book Name:</strong> {{ book.name }}</p>
+    <p><strong>Author Name:</strong> {{ book.author_name }}</p>
+    <p><strong>Label:</strong> {{ book.label }}</p>
+    <p><strong>File Name:</strong> {{ book.file.filename }}</p>
+    <a href="/download/{{ book.book_id }}">Download Book</a> <!-- Add a link to download the book -->
+</body>
+</html>

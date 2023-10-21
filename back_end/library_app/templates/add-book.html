@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book</title>
+</head>
+<body>
+    <h1>Add Book</h1>
+    <form method="POST" action="/add-book" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="author_name">Author Name:</label>
+        <input type="text" name="author_name" required><br>
+
+        <label for="label">Label:</label>
+        <select name="label" required>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Java">Java</option>
+        </select><br>
+
+        <label for="file">Book File:</label>
+        <input type="file" name="file" required><br>
+
+        <input type="submit" value="Add Book">
+    </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Update Book</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Update Book</h1>-->
+<!--<form method="POST" action="/update-book/{{ book['book_id'] }}" enctype="multipart/form-data">-->
+<!--    <label for="name">Name:</label>-->
+<!--    <input type="text" name="name" required value="{{ book.name }}"><br>-->
+
+<!--    <label for="author_name">Author Name:</label>-->
+<!--    <input type="text" name="author_name" required value="{{ book.author_name }}"><br>-->
+
+<!--    <label for="label">Label:</label>-->
+<!--    <select name="label" required>-->
+<!--        <option value="Python">Python</option>-->
+<!--        <option value="C++">C++</option>-->
+<!--        <option value="JavaScript">JavaScript</option>-->
+<!--        <option value="Java">Java</option>-->
+<!--    </select><br>-->
+
+<!--    <label for="file">Book File (optional):</label>-->
+<!--    <input type="file" name="file"><br>-->
+
+<!--    <input type="submit" value="Update Book">-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Book</title>
+</head>
+<body>
+<h1>Update Book</h1>
+<form method="POST" action="/update-book/{{ book['book_id'] }}" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required value="{{ book.name }}"><br>
+
+    <label for="author_name">Author Name:</label>
+    <input type="text" name="author_name" required value="{{ book.author_name }}"><br>
+
+    <label for="label">Label:</label>
+    <select name="label" required>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">Java</option>
+    </select><br>
+
+    <label for="file">Book File (optional):</label>
+    <input type="file" name="file"><br>
+
+    <input type="submit" value="Update Book">
+</form>
+</body>
+</html>
